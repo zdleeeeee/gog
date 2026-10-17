@@ -1,0 +1,2 @@
+# Local preview uses the domain root; production keeps /gog/ from hugo.toml.
+baseURL = 'http://localhost:1313/'

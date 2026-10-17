@@ -1,0 +1,82 @@
+baseURL = 'https://zdleeeeee.github.io/gog/'
+locale = 'zh-cn'
+title = '摆烂诸神'
+theme = 'ZedPaper'
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+# Let math delimiters pass through Goldmark untouched; KaTeX renders them client-side.
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)'], ['$', '$']]
+
+[markup.highlight]
+  lineNos = "inline"
+
+[params]
+#   mainSections = ["posts"]
+  ShowAllPagesInArchive = true
+  ShowPostNavLinks = true
+  goBackButton = false
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
+  ShowNavbar = true
+  ShowPageNums = false
+  ShowReadTime = true
+
+  fuseOpts = {
+    isCaseSensitive = false,
+    shouldSort = true,
+    minMatchCharLength = 2,
+    keys = ["title", "permalink", "summary", "content"]
+  }
+
+#   [params.profileMode]
+#     enabled = true
+#     title = "Zed Lee"
+#     subtitle = ""
+#     imageUrl = "images/profile.jpg"
+#     imageTitle = ""
+#     imageWidth = 150
+#     imageHeight = 150
+
+[pagination]
+  pagerSize = 6
+  path = 'page' 
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "导览"
+    url = "./"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "lore"
+    name = "设定"
+    url = "lore/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "works"
+    name = "作品"
+    url = "works/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "about/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "search/"
+    weight = 5
