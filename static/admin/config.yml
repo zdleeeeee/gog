@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: zdleeeeee/gog
+  branch: main
+
+site_url: https://zdleeeeee.github.io/gog/
+
+media_folder: static/uploads
+public_folder: /gog/uploads
+
+collections:
+  - name: westnor
+    label: 西方大陆-北
+    folder: content/lore/westnor
+    create: true
+    delete: false
+
+    format: toml-frontmatter
+    extension: md
+    path: "{{slug}}/index"
+
+    # Keep page-bundle images next to index.md and use relative image URLs.
+    media_folder: ""
+    public_folder: ""
+
+    editor:
+      preview: false
+
+    fields:
+      - { name: title, label: 标题, widget: string }
+      - { name: date, label: 日期, widget: datetime }
+      - { name: draft, label: 草稿, widget: boolean, default: true }
+      - { name: summary, label: 摘要, widget: text, required: false }
+      - { name: tags, label: 标签, widget: list, required: false }
+      - { name: ShowToc, widget: hidden, default: true }
+      - { name: ShowBreadCrumbs, widget: hidden, default: true }
+
+      - name: author
+        label: 作者
+        widget: list
+        required: false
+        fields:
+          - { name: name, label: 姓名, widget: string }
+          - { name: url, label: 作者链接, widget: string, required: false }
+
+      - name: cover
+        label: 封面
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: image, label: 图片, widget: image, required: false }
+          - { name: alt, label: 替代文字, widget: string, required: false }
+          - { name: source, label: 来源链接, widget: string, required: false }
+
+      - name: body
+        label: 正文
+        widget: markdown
+        modes: [raw]
