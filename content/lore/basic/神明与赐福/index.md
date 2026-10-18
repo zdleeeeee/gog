@@ -1,8 +1,8 @@
 +++
 date = '2026-10-17T23:43:59+08:00'
-draft = true
+draft = false
 title = '神明与赐福'
-tags = ['设定', '神明', '赐福']
+tags = ['神明', '赐福']
 ShowToc = true
 author = [
   { name = "Zed Lee", url = "about/作者团队/#zed-lee" }

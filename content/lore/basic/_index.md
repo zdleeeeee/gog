@@ -1,9 +1,9 @@
 +++
 date = '2026-10-18T00:19:13+08:00'
-draft = true
+draft = false
 title = '基础设定'
 pinned = true
-tags = ['']
+directoryWide = true
 summary = ''
 ShowBreadCrumbs = true
 [cover]

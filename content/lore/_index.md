@@ -1,10 +1,11 @@
 +++
 date = '2026-10-18T00:18:13+08:00'
-draft = true
+draft = false
 title = '设定'
-tags = ['']
+layout = 'directory'
 summary = ''
 ShowBreadCrumbs = false
+showTags = true
 [cover]
 image = ''
 alt = ''

@@ -1,4 +1,5 @@
 baseURL = 'https://zdleeeeee.github.io/gog/'
+defaultContentLanguage = 'zh'
 locale = 'zh-cn'
 title = '摆烂诸神'
 theme = 'ZedPaper'
@@ -33,7 +34,7 @@ theme = 'ZedPaper'
   fuseOpts = {
     isCaseSensitive = false,
     shouldSort = true,
-    minMatchCharLength = 2,
+    minMatchCharLength = 1,
     keys = ["title", "permalink", "summary", "content"]
   }
 
