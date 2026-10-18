@@ -1,0 +1,9 @@
+/* Extend the theme without replacing its Markdown stylesheet. */
+.md-content blockquote {
+    margin: 1rem 0;
+    color: var(--secondary);
+    border: 0;
+    background: var(--code-bg);
+    border-radius: 0;
+    padding: var(--radius) var(--content-gap);
+}

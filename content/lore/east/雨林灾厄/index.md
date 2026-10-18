@@ -5,7 +5,7 @@ title = '雨林灾厄'
 tags = ['雨林灾厄']
 ShowToc = true
 author = [
-  { name = "Zed Lee", url = "/about/作者团队/#zed-lee" }
+  { name = "候人猗兮", url = "/about/作者团队/#候人猗兮" }
 ]
 summary = ''
 ShowBreadCrumbs = true
