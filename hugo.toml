@@ -31,7 +31,7 @@ theme = 'ZedPaper'
   ShowPageNums = false
   ShowReadTime = true
 
-  fuseOpts = {
+  fuseOpts={
     isCaseSensitive = false,
     shouldSort = true,
     minMatchCharLength = 1,
