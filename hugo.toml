@@ -31,12 +31,11 @@ theme = 'ZedPaper'
   ShowPageNums = false
   ShowReadTime = true
 
-  fuseOpts={
-    isCaseSensitive = false,
-    shouldSort = true,
-    minMatchCharLength = 1,
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    minMatchCharLength = 1
     keys = ["title", "permalink", "summary", "content"]
-  }
 
 [pagination]
   pagerSize = 6
