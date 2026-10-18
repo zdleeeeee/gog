@@ -38,15 +38,6 @@ theme = 'ZedPaper'
     keys = ["title", "permalink", "summary", "content"]
   }
 
-#   [params.profileMode]
-#     enabled = true
-#     title = "Zed Lee"
-#     subtitle = ""
-#     imageUrl = "images/profile.jpg"
-#     imageTitle = ""
-#     imageWidth = 150
-#     imageHeight = 150
-
 [pagination]
   pagerSize = 6
   path = 'page' 
