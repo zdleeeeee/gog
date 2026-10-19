@@ -1,4 +1,4 @@
-baseURL = 'https://gog.edgeone.cool/'
+baseURL = 'https://zdleeeeee.github.io/gog/'
 defaultContentLanguage = 'zh'
 locale = 'zh-cn'
 title = '摆烂诸神'
@@ -71,3 +71,9 @@ theme = 'ZedPaper'
     name = "搜索"
     url = "search/"
     weight = 5
+
+  [[menu.main]]
+    identifier = "admin"
+    name = "登录"
+    url = "admin/"
+    weight = 6

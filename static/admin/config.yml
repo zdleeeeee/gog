@@ -9,19 +9,15 @@ output:
   omit_empty_optional_fields: true
 
 media_folder: static/uploads
-public_folder: /gog/uploads
-
-# A fixed folder enables subfolder browsing; entry-relative media stays flat.
-asset_collections:
-  - name: westnor_assets
-    label: 北方地区图片目录
-    media_folder: /content/lore/westnor
-    public_folder: /gog/lore/westnor
+public_folder: /uploads
 
 collections:
-  - name: westnor
-    label: 西方大陆-北
-    folder: content/lore/westnor
+  # Share page-bundle options and fields; only labels and paths vary below.
+  - &page_bundle
+    
+    name: basic
+    label: 基础设定
+    folder: content/lore/basic
     create: true
     delete: false
 
@@ -29,14 +25,15 @@ collections:
     extension: md
     path: "{{slug}}/index"
 
-    # Keep page-bundle images next to index.md and use relative image URLs.
-    media_folder: ""
-    public_folder: ""
+    # All lore collections share this media tree. Enter the region and article
+    # subfolders before uploading; do not register regions as separate media roots.
+    media_folder: /content/lore/basic
+    public_folder: /lore/basic
 
     editor:
       preview: false
 
-    fields: &page_fields
+    fields:
       - { name: title, label: 标题, widget: string }
       - { name: date, label: 日期, widget: datetime }
       - { name: draft, label: 草稿, widget: boolean, default: true }
@@ -44,17 +41,8 @@ collections:
       - { name: tags, label: 标签, widget: list, required: false }
       - { name: ShowToc, label: 显示目录, widget: boolean, default: true, required: false }
       - { name: ShowBreadCrumbs, label: 显示面包屑导航, widget: boolean, default: true, required: false }
-      - { name: showTags, label: 显示标签面板与归档入口（列表页）, widget: boolean, required: false }
-      - { name: pinned, label: 在父级 directory 中置顶, widget: boolean, required: false }
-      - { name: directoryWide, label: 在父级 directory 中跨列, widget: boolean, required: false }
       - { name: weight, label: 排序权重（较小优先，0 为默认）, widget: number, value_type: int, required: false }
       - { name: layout, label: 布局（留空使用默认）, widget: string, required: false }
-      - { name: hideAuthor, label: 隐藏可见作者, widget: boolean, required: false }
-      - { name: hideSummary, label: 隐藏列表摘要, widget: boolean, required: false }
-      - { name: hideMeta, label: 隐藏列表元数据, widget: boolean, required: false }
-      - { name: searchHidden, label: 从搜索中隐藏, widget: boolean, required: false }
-      - { name: hiddenInHomeList, label: 从首页列表中隐藏, widget: boolean, required: false }
-      - { name: hiddenInRss, label: 从 RSS 中隐藏, widget: boolean, required: false }
 
       - name: author
         label: 作者
@@ -70,11 +58,13 @@ collections:
         required: false
         collapsed: true
         fields:
-          - { name: image, label: 图片, widget: image, required: false }
+          - name: image
+            label: 图片
+            widget: image
+            required: false
           - { name: alt, label: 替代文字, widget: string, required: false }
           - { name: source, label: 来源链接, widget: string, required: false }
           - { name: caption, label: 封面说明, widget: string, required: false }
-          - { name: hidden, label: 隐藏封面, widget: boolean, required: false }
           - { name: hiddenInList, label: 在列表和目录卡片中隐藏封面, widget: boolean, required: false }
           - { name: hiddenInSingle, label: 在文章页中隐藏封面, widget: boolean, required: false }
 
@@ -83,15 +73,84 @@ collections:
         widget: markdown
         modes: [raw]
 
-  - name: westnor_section
-    label: 北方栏目设置
-    editor:
-      preview: false
-    files:
-      - name: westnor_index
-        label: 西方大陆-北
-        file: content/lore/westnor/_index.md
-        format: toml-frontmatter
-        media_folder: ""
-        public_folder: ""
-        fields: *page_fields
+  - <<: *page_bundle
+    name: westnor
+    label: 西方大陆-北
+    folder: content/lore/westnor
+    media_folder: /content/lore/westnor
+    public_folder: /lore/westnor
+
+  - <<: *page_bundle
+    name: east
+    label: 东方大陆
+    folder: content/lore/east
+    media_folder: /content/lore/east
+    public_folder: /lore/east
+
+  - <<: *page_bundle
+    name: westsou
+    label: 西方大陆-南
+    folder: content/lore/westsou
+    media_folder: /content/lore/westsou
+    public_folder: /lore/westsou
+
+  - <<: *page_bundle
+    name: souisland
+    label: 南环诸岛
+    folder: content/lore/souisland
+    media_folder: /content/lore/souisland
+    public_folder: /lore/souisland
+
+  - <<: *page_bundle
+    name: works
+    label: 作品
+    folder: content/works
+    media_folder: /content/works
+    public_folder: /works
+
+  - <<: *page_bundle
+    name: about
+    label: 关于
+    folder: content/about
+    media_folder: /content/about
+    public_folder: /about
+
+  - <<: *page_bundle
+    name: lore
+    label: 设定
+    folder: content/lore
+    path: "{{slug}}/_index"
+
+    media_folder: /content/lore
+    public_folder: /lore
+
+    fields:
+      - { name: title, label: 标题, widget: string }
+      - { name: date, label: 日期, widget: datetime }
+      - { name: draft, label: 草稿, widget: boolean, default: true }
+      - { name: summary, label: 摘要, widget: text, required: false }
+      - { name: ShowBreadCrumbs, label: 显示面包屑导航, widget: boolean, default: true, required: false }
+      - { name: weight, label: 排序权重（较小优先，0 为默认）, widget: number, value_type: int, required: false }
+      - { name: layout, label: 布局（留空使用默认）, widget: string, required: false }
+
+      - name: cover
+        label: 封面
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - name: image
+            label: 图片
+            widget: image
+            required: false
+          - { name: alt, label: 替代文字, widget: string, required: false }
+          - { name: source, label: 来源链接, widget: string, required: false }
+          - { name: caption, label: 封面说明, widget: string, required: false }
+          - { name: hiddenInList, label: 在列表和目录卡片中隐藏封面, widget: boolean, required: false }
+          - { name: hiddenInSingle, label: 在文章页中隐藏封面, widget: boolean, required: false }
+
+      - name: body
+        label: 正文
+        widget: markdown
+        modes: [raw]
+        required: false
