@@ -1,15 +1,13 @@
 +++
-date = '2026-10-17T23:56:14+08:00'
+title = "作者团队"
+date = 2026-10-17T23:56:14.000+08:00
 draft = false
-title = '作者团队'
-tags = ['']
 ShowToc = true
-summary = ''
 ShowBreadCrumbs = true
+
 [cover]
-image = ''
-alt = ''
-source = ''
+hiddenInList = false
+hiddenInSingle = false
 +++
 
 ## Zed Lee
@@ -43,3 +41,7 @@ source = ''
 ## 笑书
 
 优玛负责人。
+
+## 我能在有健忘症的情况下
+
+原博拉迪亚负责人。
