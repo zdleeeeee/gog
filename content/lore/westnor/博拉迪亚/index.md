@@ -8,7 +8,7 @@ ShowBreadCrumbs = true
 
 [[author]]
 name = "我能在患有健忘症的情况下"
-url = "/about/作者团队/#zed-lee"
+url = "/about/作者团队/#我能在患有健忘症的情况下"
 
 [cover]
 image = "/lore/westnor/博拉迪亚/bacus.jpg"
