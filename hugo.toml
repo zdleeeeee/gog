@@ -1,6 +1,7 @@
 baseURL = 'https://zdleeeeee.github.io/gog/'
 defaultContentLanguage = 'zh'
 locale = 'zh-cn'
+timeZone = 'Asia/Shanghai'
 title = '摆烂诸神'
 theme = 'ZedPaper'
 [outputs]
