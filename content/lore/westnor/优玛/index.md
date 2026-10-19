@@ -2,7 +2,6 @@
 title = "优玛"
 date = 2026-10-18T10:34:19.000+08:00
 draft = false
-summary = ""
 tags = [ "优玛" ]
 ShowToc = true
 ShowBreadCrumbs = true
@@ -12,9 +11,9 @@ name = "候人猗兮"
 url = "/about/作者团队/#候人猗兮"
 
 [cover]
-image = ""
-alt = ""
-source = ""
+image = "/lore/westnor/优玛/Fish-Man.jpg"
+hiddenInList = false
+hiddenInSingle = true
 +++
 
 ## 简介
