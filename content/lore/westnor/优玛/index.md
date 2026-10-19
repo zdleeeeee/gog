@@ -1,18 +1,20 @@
 +++
-date = '2026-10-18T10:34:19+08:00'
+title = "优玛"
+date = 2026-10-18T10:34:19.000+08:00
 draft = false
-title = '优玛'
-tags = ['优玛']
+summary = ""
+tags = [ "优玛" ]
 ShowToc = true
-author = [
-  { name = "候人猗兮", url = "/about/作者团队/#候人猗兮" }
-]
-summary = ''
 ShowBreadCrumbs = true
+
+[[author]]
+name = "候人猗兮"
+url = "/about/作者团队/#候人猗兮"
+
 [cover]
-image = ''
-alt = ''
-source = ''
+image = ""
+alt = ""
+source = ""
 +++
 
 ## 简介
@@ -83,7 +85,7 @@ source = ''
 
 ### 深海居民 鱼人
 
-{{< figure src="鱼人.jpg" alt="深海居民 鱼人" width="320" align="center" title="深海居民 鱼人" caption="优玛城市影集-塔顶酒馆" attr="Zed Lee" attrref="/about/作者团队/#zed-lee" link="鱼人.jpg" >}}
+{{< figure src="Fish-Man.jpg" alt="深海居民 鱼人" width="320" align="center" title="深海居民 鱼人" caption="优玛城市影集-塔顶酒馆" attr="Zed Lee" attrref="/about/作者团队/#zed-lee" link="Fish-Man.jpg" >}}
 
 鱼人是海洋帝国中亲近艾琉奥涅的一支，形象为健美强壮的人类身体上长着鱼鳞和鱼头，适应深海的阴暗而畏惧明媚的日光。“深潜者”通过暴力和经济支持来掌握优玛明面上的统治阶级。他们的领地在沿海的州，包括近海的地下洞穴和水系发达的沿海城市，他们通过捕鱼和捕捞沉船积累财富，发展有卓越的航海技术和相关的魔法工业。
 
