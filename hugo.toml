@@ -18,6 +18,9 @@ theme = 'ZedPaper'
     block = [['\[', '\]'], ['$$', '$$']]
     inline = [['\(', '\)'], ['$', '$']]
 
+[markup.goldmark.extensions.extras.mark]
+  enable = true
+
 [markup.highlight]
   lineNos = "inline"
 

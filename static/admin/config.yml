@@ -8,8 +8,8 @@ site_url: https://zdleeeeee.github.io/gog/
 output:
   omit_empty_optional_fields: true
 
-media_folder: static/uploads
-public_folder: /uploads
+media_folder: content
+public_folder: /gog
 
 collections:
   # Share page-bundle options and fields; only labels and paths vary below.
@@ -28,7 +28,7 @@ collections:
     # All lore collections share this media tree. Enter the region and article
     # subfolders before uploading; do not register regions as separate media roots.
     media_folder: /content/lore/basic
-    public_folder: /lore/basic
+    public_folder: /gog/lore/basic
 
     editor:
       preview: false
@@ -78,42 +78,42 @@ collections:
     label: 西方大陆-北
     folder: content/lore/westnor
     media_folder: /content/lore/westnor
-    public_folder: /lore/westnor
+    public_folder: /gog/lore/westnor
 
   - <<: *page_bundle
     name: east
     label: 东方大陆
     folder: content/lore/east
     media_folder: /content/lore/east
-    public_folder: /lore/east
+    public_folder: /gog/lore/east
 
   - <<: *page_bundle
     name: westsou
     label: 西方大陆-南
     folder: content/lore/westsou
     media_folder: /content/lore/westsou
-    public_folder: /lore/westsou
+    public_folder: /gog/lore/westsou
 
   - <<: *page_bundle
     name: souisland
     label: 南环诸岛
     folder: content/lore/souisland
     media_folder: /content/lore/souisland
-    public_folder: /lore/souisland
+    public_folder: /gog/lore/souisland
 
   - <<: *page_bundle
     name: works
     label: 作品
     folder: content/works
     media_folder: /content/works
-    public_folder: /works
+    public_folder: /gog/works
 
   - <<: *page_bundle
     name: about
     label: 关于
     folder: content/about
     media_folder: /content/about
-    public_folder: /about
+    public_folder: /gog/about
 
   - <<: *page_bundle
     name: lore
@@ -122,7 +122,7 @@ collections:
     path: "{{slug}}/_index"
 
     media_folder: /content/lore
-    public_folder: /lore
+    public_folder: /gog/lore
 
     fields:
       - { name: title, label: 标题, widget: string }

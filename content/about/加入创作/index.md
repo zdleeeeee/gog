@@ -100,23 +100,31 @@ url = "/about/作者团队/#zed-lee"
 同理你可以以此类推到六级标题，但建议只使用二级到四级标题。
 ```
 
-#### 加粗、斜体、删除线、链接
+#### 加粗、斜体、删除线、高亮
 
 ```markdown
-这是**加粗**；这是*斜体*；~~这是删除线~~
-
-这是一条链接：[bilibili](www.bilibili.com "这是alt，鼠标悬停在链接时会显示")
-
-这是一条相对链接：[博拉迪亚]({{%/* relref "/lore/westnor/博拉迪亚" */%}} "这是alt")
+这是**加粗**；这是*斜体*；~~这是删除线~~；这是==高亮==
 ```
 
 {{< collapse summary="点击查看效果" >}}
 
-这是**加粗**；这是*斜体*；~~这是删除线~~
+这是**加粗**；这是*斜体*；~~这是删除线~~；这是==高亮==
 
-这是一条链接：[bilibili](www.bilibili.com "这是alt，鼠标悬停在链接时会显示")
+{{< /collapse >}}
 
-这是一条相对链接：[博拉迪亚]({{%/* relref "/lore/westnor/博拉迪亚" */%}} "这是alt")
+#### 链接
+
+```markdown
+这是一条链接：[bilibili](https://www.bilibili.com/ "这是title，鼠标悬停在链接时会显示，注意连接开头必须写清除协议，也就是https://")
+
+这是一条相对链接：[博拉迪亚](/lore/westnor/博拉迪亚 "这是title")
+```
+
+{{< collapse summary="点击查看效果" >}}
+
+这是一条链接：[bilibili](https://www.bilibili.com/ "这是alt，鼠标悬停在链接时会显示，注意连接开头必须写清除协议，也就是https://")
+
+这是一条相对链接：[博拉迪亚](/gog/lore/westnor/博拉迪亚 "这是alt")
 
 {{< /collapse >}}
 
@@ -160,16 +168,12 @@ url = "/about/作者团队/#zed-lee"
 > 引用中也可以换行，但每行开头都需要“> ”
 ```
 
-{{< collapse summary="点击查看效果" >}}
-
 > 这是一条引用。
 >
 > 引用中也可以换行，但每行开头都需要“> ”
 
-{{< /collapse >}}
-
 ```markdown
-{{</* quote source="——Zed Lee[《加入创作》](/gog/about/加入创作)" */>}}
+{{</* quote source="——Zed Lee[《加入创作》](/about/加入创作/)" */>}}
 
 这是Shortcode版引用，source指定引用出处。
 
@@ -178,8 +182,162 @@ url = "/about/作者团队/#zed-lee"
 
 效果：
 
-{{< quote source="——Zed Lee[《加入创作》](/gog/about/加入创作)" >}}
+{{< quote source="——Zed Lee[《加入创作》](/about/加入创作/)" >}}
 
 这是Shortcode版引用，source指定引用出处。
 
 {{< /quote >}}
+
+#### 图片
+
+**上传图片与填写路径**
+
+在后台媒体库中先进入/创建当前文章的图片文件夹，再上传图片。比如本文的图片放在 `关于 → 加入创作` 中；优玛的图片放在 `设定 → westnor → 优玛` 中。不要直接上传到栏目根目录，以免不同文章的图片混在一起。
+
+本地编辑时，直接把图片放到文章的 `index.md` 同目录即可。例如：
+
+```text
+content/about/加入创作/
+├─ index.md
+├─ create-token.jpg
+└─ get-token.jpg
+```
+
+同目录图片可以直接写文件名，比如 `create-token.jpg`。
+
+==**注意：图片名只能使用英文字符，不要使用中文！**==
+
+**Markdown 图片**
+
+图片的写法比普通链接多一个开头的感叹号：
+
+```markdown
+![GitHub 创建 Token 的设置页面](create-token.jpg)
+
+![GitHub 创建 Token 的设置页面](create-token.jpg "创建前请检查仓库权限")
+```
+
+方括号里的文字是 `alt`，即图片的替代文字，用来描述画面内容，供屏幕阅读器读取，也可在图片加载失败时提供说明。它不是图片下方的说明文字。圆括号中可选的引号文字是 `title`，通常在鼠标悬停时显示，触屏设备上不方便查看，所以重要说明请直接写在正文中。
+
+{{< collapse summary="点击查看图片效果" >}}
+
+![GitHub 创建 Token 的设置页面](create-token.jpg "创建前请检查仓库权限")
+
+{{< /collapse >}}
+
+使用外部图片时，填写完整地址：
+
+```markdown
+![图片内容的描述](https://example.com/image.jpg)
+```
+
+上面的地址仅用于说明写法，请替换成实际图片地址。长期使用的插图建议上传到文章目录，避免原网站删除图片后失效。
+
+##### 设置宽度、居中和图片说明
+
+需要指定宽度、居中，或在图片下面显示标题与来源时，可以使用 `figure`：
+
+```markdown
+{{</* figure
+  src="create-token.jpg"
+  alt="GitHub 创建 Token 的设置页面"
+  width="320"
+  align="center"
+  title="创建 Token"
+  caption="填写前请确认仓库和权限选项。"
+  link="create-token.jpg"
+*/>}}
+```
+
+效果：
+
+{{< figure src="create-token.jpg" alt="GitHub 创建 Token 的设置页面" width="320" align="center" title="创建 Token" caption="填写前请确认仓库和权限选项。" link="create-token.jpg" >}}
+
+| 参数 | 作用 |
+| --- | --- |
+| `src` | 图片路径，必填。 |
+| `alt` | 描述图片内容的替代文字。 |
+| `width` | 目标宽度，单位为像素，只写数字。容器不够宽时，图片会按比例缩小。 |
+| `align="center"` | 图片居中。 |
+| `title` | 在本主题的 `figure` 中，是图片下方的可见标题，不是鼠标悬停提示。 |
+| `caption` | 图片下方的说明，支持 Markdown。 |
+| `link` | 点击图片时打开的地址；与 `src` 相同即可查看原图。 |
+
+只需填写用到的参数，其余可以省略。通常设置 `width` 即可，高度会自动按图片比例调整。`figure` 是单独使用的 shortcode，不需要再写结束标签。
+
+##### 标注图片作者或来源
+
+`attr` 用于写作者或来源，`attrlink` 为这段署名添加外部链接：
+
+```markdown
+{{</* figure src="插图.jpg" alt="插图内容的描述" attr="作者名字" attrlink="https://example.com/" */>}}
+```
+
+如果要链接本站的作者团队页，使用 `attrref`，它会自动处理本地与远程部署路径：
+
+```markdown
+{{</* figure src="插图.jpg" alt="插图内容的描述" attr="Zed Lee" attrref="/about/作者团队/#zed-lee" */>}}
+```
+
+这里的 `插图.jpg` 是示例文件名，请替换为已上传的图片。不要在参数里再嵌套 `{{</* relref ... */>}}`；`attrref` 已经负责解析站内引用。若同时写 `caption` 和 `attr`，可以在 `caption` 末尾加一个空格，让说明和署名之间留有间隔。
+
+#### 对话气泡：message
+
+`message` 可以把一段文字显示成聊天气泡，适合人物对话、书信片段或创作说明。正文仍按 Markdown 书写，可以加粗、分段或使用列表。
+
+```markdown
+{{</* message name="创作者" */>}}
+我想写一个发生在优玛的故事。
+
+故事可以从一个**尚未解决的矛盾**开始。
+{{</* /message */>}}
+
+{{</* message name="Zed Lee" align="right" */>}}
+可以先写下人物想得到什么，以及他们必须付出的代价。
+{{</* /message */>}}
+```
+
+{{< collapse summary="点击查看对话气泡效果" >}}
+
+{{< message name="创作者" >}}
+我想写一个发生在优玛的故事。
+
+故事可以从一个**尚未解决的矛盾**开始。
+{{< /message >}}
+
+{{< message name="Zed Lee" align="right" >}}
+可以先写下人物想得到什么，以及他们必须付出的代价。
+{{< /message >}}
+
+{{< /collapse >}}
+
+每条消息需要自己的开始标签和结束标签 `{{</* /message */>}}`。默认靠左，`align="right"` 会让整条消息靠右，不需要为另一位说话者创建新的 shortcode。
+
+**头像与颜色**
+
+所有参数都可以省略。不填头像就只显示气泡，不填名字就不显示姓名。默认颜色会跟随主题的深浅色模式，通常不需要手动设置。
+
+| 参数 | 作用 |
+| --- | --- |
+| `name` | 显示的说话者姓名。 |
+| `avatar` | 头像图片地址；同目录图片直接填写文件名。 |
+| `align="right"` | 将头像和气泡放到右侧；省略时靠左。 |
+| `nameColor` | 姓名颜色，默认使用 `var(--secondary)`。 |
+| `background` | 气泡背景色，默认使用 `var(--code-bg)`。注意不是 `backgroundColor`。 |
+| `textColor` | 正文颜色，默认使用 `var(--content)`。 |
+
+如果需要自定义，可以这样写：
+
+```markdown
+{{</* message name="旅人" avatar="Traveller.jpg" align="left" nameColor="#884fad" background="var(--code-bg)" textColor="var(--content)" */>}}
+今晚的渡船还会来吗？
+{{</* /message */>}}
+```
+
+这里的 `avatar.jpg` 是示例文件名，使用前请先上传自己的头像图片，或直接省略 `avatar`。参数名区分大小写，`nameColor` 和 `textColor` 要按示例书写。自定义颜色后，建议分别在浅色和深色模式下检查文字是否清晰。
+
+{{< message name="旅人" avatar="Traveller.jpg" align="left" nameColor="#884fad" background="var(--code-bg)" textColor="var(--content)" >}}
+
+今晚的渡船还会来吗？
+
+{{< /message >}}

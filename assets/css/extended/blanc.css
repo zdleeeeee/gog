@@ -1,0 +1,9 @@
+.chat-message-body {
+    max-width: 100%;
+    font-size: 18px;
+    padding: var(--radius);
+    border-radius: var(--radius);
+    background: var(--chat-background, var(--code-bg));
+    color: var(--chat-text-color, var(--content));
+    overflow-wrap: anywhere;
+}
