@@ -233,7 +233,7 @@ content/about/加入创作/
 
 上面的地址仅用于说明写法，请替换成实际图片地址。长期使用的插图建议上传到文章目录，避免原网站删除图片后失效。
 
-##### 设置宽度、居中和图片说明
+**设置宽度、居中和图片说明**
 
 需要指定宽度、居中，或在图片下面显示标题与来源时，可以使用 `figure`：
 
@@ -265,7 +265,7 @@ content/about/加入创作/
 
 只需填写用到的参数，其余可以省略。通常设置 `width` 即可，高度会自动按图片比例调整。`figure` 是单独使用的 shortcode，不需要再写结束标签。
 
-##### 标注图片作者或来源
+**标注图片作者或来源**
 
 `attr` 用于写作者或来源，`attrlink` 为这段署名添加外部链接：
 
@@ -279,39 +279,37 @@ content/about/加入创作/
 {{</* figure src="插图.jpg" alt="插图内容的描述" attr="Zed Lee" attrref="/about/作者团队/#zed-lee" */>}}
 ```
 
-这里的 `插图.jpg` 是示例文件名，请替换为已上传的图片。不要在参数里再嵌套 `{{</* relref ... */>}}`；`attrref` 已经负责解析站内引用。若同时写 `caption` 和 `attr`，可以在 `caption` 末尾加一个空格，让说明和署名之间留有间隔。
+这里的 `插图.jpg` 是示例文件名，请替换为已上传的图片。`attrref` 已经负责解析站内引用。若同时写 `caption` 和 `attr`，可以在 `caption` 末尾加一个空格，让说明和署名之间留有间隔。
 
-#### 对话气泡：message
+#### 对话气泡
 
 `message` 可以把一段文字显示成聊天气泡，适合人物对话、书信片段或创作说明。正文仍按 Markdown 书写，可以加粗、分段或使用列表。
 
 ```markdown
 {{</* message name="创作者" */>}}
-我想写一个发生在优玛的故事。
-
-故事可以从一个**尚未解决的矛盾**开始。
+我想写一个发生在优玛的故事。  
+少年采诗官陆轲来到蒙特利亚完成他的壮游仪式。
 {{</* /message */>}}
 
 {{</* message name="Zed Lee" align="right" */>}}
-可以先写下人物想得到什么，以及他们必须付出的代价。
+期待ing！
 {{</* /message */>}}
 ```
 
 {{< collapse summary="点击查看对话气泡效果" >}}
 
 {{< message name="创作者" >}}
-我想写一个发生在优玛的故事。
-
-故事可以从一个**尚未解决的矛盾**开始。
+我想写一个发生在优玛的故事。  
+少年采诗官陆轲来到蒙特利亚完成他的壮游仪式。
 {{< /message >}}
 
 {{< message name="Zed Lee" align="right" >}}
-可以先写下人物想得到什么，以及他们必须付出的代价。
+期待ing！
 {{< /message >}}
 
 {{< /collapse >}}
 
-每条消息需要自己的开始标签和结束标签 `{{</* /message */>}}`。默认靠左，`align="right"` 会让整条消息靠右，不需要为另一位说话者创建新的 shortcode。
+每条消息需要自己的开始标签和结束标签 `{{</* /message */>}}`。默认靠左，`align="right"` 会让整条消息靠右。
 
 **头像与颜色**
 
@@ -323,21 +321,23 @@ content/about/加入创作/
 | `avatar` | 头像图片地址；同目录图片直接填写文件名。 |
 | `align="right"` | 将头像和气泡放到右侧；省略时靠左。 |
 | `nameColor` | 姓名颜色，默认使用 `var(--secondary)`。 |
-| `background` | 气泡背景色，默认使用 `var(--code-bg)`。注意不是 `backgroundColor`。 |
+| `background` | 气泡背景色，默认使用 `var(--code-bg)`。collapse组件内默认使用`var(--entry)` |
 | `textColor` | 正文颜色，默认使用 `var(--content)`。 |
 
 如果需要自定义，可以这样写：
 
 ```markdown
-{{</* message name="旅人" avatar="Traveller.jpg" align="left" nameColor="#884fad" background="var(--code-bg)" textColor="var(--content)" */>}}
+{{</* message name="旅人" avatar="Traveller.jpg" align="left" nameColor="#34a458" background="#b2b2b240" textColor="var(--content)" */>}}
 今晚的渡船还会来吗？
 {{</* /message */>}}
 ```
 
 这里的 `avatar.jpg` 是示例文件名，使用前请先上传自己的头像图片，或直接省略 `avatar`。参数名区分大小写，`nameColor` 和 `textColor` 要按示例书写。自定义颜色后，建议分别在浅色和深色模式下检查文字是否清晰。
 
-{{< message name="旅人" avatar="Traveller.jpg" align="left" nameColor="#884fad" background="var(--code-bg)" textColor="var(--content)" >}}
+{{< message name="旅人" avatar="Traveller.jpg" align="left" nameColor="#34a458" background="#b2b2b240" textColor="var(--content)" >}}
 
 今晚的渡船还会来吗？
 
 {{< /message >}}
+
+颜色代码查询网站：[HTML Color Codes](https://htmlcolorcodes.com/)
