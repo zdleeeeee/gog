@@ -100,15 +100,23 @@ url = "/about/作者团队/#zed-lee"
 同理你可以以此类推到六级标题，但建议只使用二级到四级标题。
 ```
 
-#### 加粗、斜体、删除线
+#### 加粗、斜体、删除线、链接
 
 ```markdown
 这是**加粗**；这是*斜体*；~~这是删除线~~
+
+这是一条链接：[bilibili](www.bilibili.com "这是alt，鼠标悬停在链接时会显示")
+
+这是一条相对链接：[加入创作]({{%/* relref "/lore/westnor/博拉迪亚" */%}} "这是alt")
 ```
 
 {{< collapse summary="点击查看效果" >}}
 
 这是**加粗**；这是*斜体*；~~这是删除线~~
+
+这是一条链接：[bilibili](www.bilibili.com "这是alt，鼠标悬停在链接时会显示")
+
+这是一条相对链接：[加入创作]({{%/* relref "/lore/westnor/博拉迪亚" */%}} "这是alt")
 
 {{< /collapse >}}
 
@@ -157,5 +165,23 @@ url = "/about/作者团队/#zed-lee"
 > 这是一条引用。
 >
 > 引用中也可以换行，但每行开头都需要“> ”
+
+{{< /collapse >}}
+
+```markdown
+{{</* quote source="——Zed Lee[《加入创作》]({{%/* relref "/about/加入创作" */%}})" */>}}
+
+这是Shortcode版引用，source指定引用出处。
+
+{{</* /quote */>}}
+```
+
+{{< collapse summary="点击查看效果" >}}
+
+{{< quote source="——Zed Lee[《加入创作》]({{% relref "/about/加入创作" %}})" >}}
+
+这是Shortcode版引用，source指定引用出处。
+
+{{< /quote >}}
 
 {{< /collapse >}}
