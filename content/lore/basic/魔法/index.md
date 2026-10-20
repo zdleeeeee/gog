@@ -1,18 +1,18 @@
 +++
-date = '2026-10-18T10:32:38+08:00'
+title = "魔法"
+date = 2026-10-18T10:32:38.000+08:00
 draft = false
-title = '魔法'
-tags = ['魔法']
+tags = [ "魔法" ]
 ShowToc = true
-author = [
-  { name = "Zed Lee", url = "/about/作者团队/#zed-lee" }
-]
-summary = ''
 ShowBreadCrumbs = true
+
+[[author]]
+name = "Zed Lee"
+url = "/about/作者团队/#zed-lee"
+
 [cover]
-image = ''
-alt = ''
-source = ''
+hiddenInList = false
+hiddenInSingle = false
 +++
 
 ## 魔力
@@ -50,7 +50,7 @@ source = ''
 
 人类能够通过物理刺激打破晶体的亚稳态，释放出被锁住的激发态魔流。
 
-
+## TODO: 以下历史发生的时间可能会修改
 
 ## 工业革命
 
