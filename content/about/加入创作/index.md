@@ -176,12 +176,10 @@ url = "/about/作者团队/#zed-lee"
 {{</* /quote */>}}
 ```
 
-{{< collapse summary="点击查看效果" >}}
+效果：
 
 {{< quote source="——Zed Lee[《加入创作》]({{% relref "/about/加入创作" %}})" >}}
 
 这是Shortcode版引用，source指定引用出处。
 
 {{< /quote >}}
-
-{{< /collapse >}}
