@@ -107,7 +107,9 @@ url = "/about/作者团队/#zed-lee"
 
 这是一条链接：[bilibili](www.bilibili.com "这是alt，鼠标悬停在链接时会显示")
 
-这是一条相对链接：[加入创作]({{%/* relref "/lore/westnor/博拉迪亚" */%}} "这是alt")
+这是一条相对链接：[博拉迪亚]({{%/* relref "/lore/westnor/博拉迪亚" */%}} "这是alt")
+
+这是一条相对链接：[博拉迪亚](/lore/westnor/博拉迪亚 "这是alt")
 ```
 
 {{< collapse summary="点击查看效果" >}}
@@ -169,7 +171,7 @@ url = "/about/作者团队/#zed-lee"
 {{< /collapse >}}
 
 ```markdown
-{{</* quote source="——Zed Lee[《加入创作》]({{%/* relref "/about/加入创作" */%}})" */>}}
+{{</* quote source="——Zed Lee[《加入创作》](/about/加入创作)" */>}}
 
 这是Shortcode版引用，source指定引用出处。
 
@@ -178,7 +180,7 @@ url = "/about/作者团队/#zed-lee"
 
 效果：
 
-{{< quote source="——Zed Lee[《加入创作》]({{% relref "/about/加入创作" %}})" >}}
+{{< quote source="——Zed Lee[《加入创作》](/about/加入创作)" >}}
 
 这是Shortcode版引用，source指定引用出处。
 
