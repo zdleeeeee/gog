@@ -1,18 +1,18 @@
 +++
-date = '2026-10-18T10:34:34+08:00'
+title = "德买西亚"
+date = 2026-10-18T10:34:34.000+08:00
 draft = false
-title = '德买西亚'
-tags = ['德买西亚']
+tags = [ "德买西亚" ]
 ShowToc = true
-author = [
-  { name = "Zed Lee", url = "/about/作者团队/#zed-lee" }
-]
-summary = ''
 ShowBreadCrumbs = true
+
+[[author]]
+name = "Zed Lee"
+url = "/about/作者团队/#zed-lee"
+
 [cover]
-image = ''
-alt = ''
-source = ''
+hiddenInList = false
+hiddenInSingle = false
 +++
 
 德买西亚（Dhemaishya）是位于西大陆东方的一个大岛上的国家，德买西亚的国土维度在北纬10°-28°之间，经度在东经24°-47°，属于热带海洋季风气候国家。德玛西亚的西北方与优玛隔海相望，国土以西北到东南之势分隔了西南方的香露洋和东北方的沧央洋。
@@ -161,6 +161,8 @@ source = ''
 
 形象：孔雀，金瞳，五彩尾屏，展开时如万千巨眼。
 
+> 孔雀在印度文化中象征：胜利、王权、不朽、以及“吞噬毒物”的能力（传说孔雀能消化毒蛇的毒液）。
+
 ### 库兰
 
 > *“海潮逝而复归，抹平土地的伤口。”*
@@ -217,4 +219,3 @@ source = ''
 
 
 ## 圣王梭巴什
-
