@@ -23,7 +23,7 @@ url = "/about/作者团队/#zed-lee"
 
 ## 加入成为仓库合作者
 
-向 Zed Lee 发送您用于注册 GitHub 的邮箱，Zed Lee 将会向您发送合作者邀请，请在 GitHub 通知里即时接受邀请。
+请在本世界观qq群找到群主（Zed Lee），并向他发送您用于注册 GitHub 的邮箱，Zed Lee 将会向您发送合作者邀请，请在 GitHub 通知里即时接受邀请。
 
 
 
