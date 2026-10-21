@@ -2,7 +2,7 @@
 title = "魔法"
 date = 2026-10-18T10:32:38.000+08:00
 draft = false
-tags = [ "魔法" ]
+tags = [ '魔法' , '魔法工业']
 ShowToc = true
 ShowBreadCrumbs = true
 

@@ -1,11 +1,15 @@
 +++
 title = '世界现状'
 date = '2026-10-22T00:00:00+08:00'
-draft = true
+draft = false
 tags = ['时代', '国际关系', '魔法工业']
 summary = '关于当前时代、各国位置与魔法工业发展差异的讨论草案。'
 ShowToc = true
 ShowBreadCrumbs = true
+
+[[author]]
+name = "Zed Lee"
+url = "/about/作者团队/#zed-lee"
 +++
 
 本文供创作者协调时代背景与国家关系，暂作讨论草案。下文区分已明确的方向与建议中的安排；尚未确定的战争、联盟、技术和殖民细节，不作为正式历史。
